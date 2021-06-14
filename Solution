@@ -1,0 +1,17 @@
+import java.util.*;
+
+class Solution {
+    public int solve(int[] prices, int k) {
+        Arrays.sort(prices); 
+        int i = 0; 
+        for (int c : prices) {
+            k -= c; 
+            if (k < 0) { 
+                break;
+            }
+            i++; 
+        }
+
+        return i;
+    }
+}
